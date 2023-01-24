@@ -1,32 +1,33 @@
 import React from "react";
 import  ReactDOM  from "react-dom/client";
 
+const Title = ()=>(
+    <h1 id="title" key="h2">Food villa</h1>
 
-const heading = React.createElement(
-    "h1",
-    {
-        id:"title",
-    },
-    "heading 1"
-);
-const heading2 = React.createElement(
-    "h2",
-    {
-        id:"title",
-    },
-    "heading2"
-);
-
-const container = React.createElement(
-    "div",
-    {
-        id:"container",
-        hello: "world",
-    },
-    [heading,heading2]
 )
-console.log(heading);
+
+const HeaderComponents =()=>{
+    return(
+        <div>
+            <Title/>
+  <div className="nav-item">
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact Us</li>
+        <li>Cart</li>
+    </ul>
+  </div>
+        </div>
+    )
+}
+
+const AppLayout = ()=>{
+    return(
+{}
+    )
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 
-root.render(container)
+root.render(<HeaderComponents />)
