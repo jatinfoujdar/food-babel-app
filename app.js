@@ -8,7 +8,7 @@ const Title = () => (
  );
 
 // Composing Comopnentss
-const HeaderComponent = () => {
+const Header = () => {
   return (
     <div className="header">
       <Title />
@@ -23,9 +23,27 @@ const HeaderComponent = () => {
     </div>
   );
 };
+
+const RestrauntCard =()=>{
+    return(
+        <div className="card">
+            <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/kack9oun6qtoz1tzbt0i"/>
+            <h2>Burger King</h2>
+            <h3>4.2 stars</h3>
+        </div>
+    )
+}
+
 const Body=()=>{
     return(
-        <h4>body</h4>
+        <div className="restrauntCards">
+            <RestrauntCard/>
+            <RestrauntCard/>
+            <RestrauntCard/>
+            <RestrauntCard/>
+            <RestrauntCard/>
+            <RestrauntCard/>
+        </div>
     )
 }
 const Footer=()=>{
@@ -45,4 +63,4 @@ const AppLayout =() =>{
 }
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<HeaderComponent />);
+root.render(<AppLayout/>);

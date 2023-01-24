@@ -16,3 +16,18 @@
 .logo{
     width: 100px;
 }
+
+
+.card{
+    width: 250px;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+.card >img{
+    width: 100%;
+}
+.restrauntCards{
+    display: flex;
+    flex-wrap: wrap;
+}
