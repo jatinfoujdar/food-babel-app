@@ -758,8 +758,7 @@ const Header = () => {
   );
 };
 
-const RestrauntCard =({restaurant})=>{
-    const {name,cloudinaryImageId,cuisines,lastMileTravelString} = restaurant.data;
+const RestrauntCard =({name,cloudinaryImageId,cuisines,lastMileTravelString})=>{
     return(
         <div className="card">
        <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+ cloudinaryImageId}/>
@@ -773,12 +772,12 @@ const RestrauntCard =({restaurant})=>{
 const Body=()=>{
     return(
         <div className="restrauntCards">
-            <RestrauntCard restaurant={restaurantList[0]}/>
-            <RestrauntCard restaurant={restaurantList[1]}/>
-            <RestrauntCard restaurant={restaurantList[2]}/>
-            <RestrauntCard restaurant={restaurantList[3]}/>
-            <RestrauntCard restaurant={restaurantList[4]}/>
-            <RestrauntCard restaurant={restaurantList[5]}/>
+            <RestrauntCard {...restaurantList[0].data}/>
+            <RestrauntCard {...restaurantList[1].data}/>
+            <RestrauntCard {...restaurantList[2].data}/>
+            <RestrauntCard {...restaurantList[3].data}/>
+            <RestrauntCard {...restaurantList[4].data}/>
+            <RestrauntCard {...restaurantList[5].data}/>
         </div>
     )
 }
