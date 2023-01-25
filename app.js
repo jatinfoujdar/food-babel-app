@@ -758,13 +758,14 @@ const Header = () => {
   );
 };
 
-const RestrauntCard =(props)=>{
+const RestrauntCard =({restaurant})=>{
+    const {name,cloudinaryImageId,cuisines,lastMileTravelString} = restaurant.data;
     return(
         <div className="card">
-       <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+ props.restaurant.data?.cloudinaryImageId}/>
-    <h2>{props.restaurant.data?.name}</h2>
-      <h3>{props.restaurant.data?.cuisines.join(",")}</h3>
-      <h3>{props.restaurant.data?.lastMileTravelString}</h3>
+       <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+ cloudinaryImageId}/>
+    <h2>{name}</h2>
+      <h3>{cuisines.join(",")}</h3>
+      <h3>{lastMileTravelString}</h3>
         </div>
     )
 }
