@@ -758,13 +758,13 @@ const Header = () => {
   );
 };
 
-const RestrauntCard =()=>{
+const RestrauntCard =(props)=>{
     return(
         <div className="card">
-       <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+ restaurantList[1].data?.cloudinaryImageId}/>
-    <h2>{restaurantList[0].data?.name}</h2>
-      <h3>{restaurantList[0].data?.cuisines.join(",")}</h3>
-      <h3>{restaurantList[0].data?.lastMileTravelString}</h3>
+       <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+ props.restaurant.data?.cloudinaryImageId}/>
+    <h2>{props.restaurant.data?.name}</h2>
+      <h3>{props.restaurant.data?.cuisines.join(",")}</h3>
+      <h3>{props.restaurant.data?.lastMileTravelString}</h3>
         </div>
     )
 }
@@ -772,12 +772,12 @@ const RestrauntCard =()=>{
 const Body=()=>{
     return(
         <div className="restrauntCards">
-            <RestrauntCard/>
-            <RestrauntCard/>
-            <RestrauntCard/>
-            <RestrauntCard/>
-            <RestrauntCard/>
-            <RestrauntCard/>
+            <RestrauntCard restaurant={restaurantList[0]}/>
+            <RestrauntCard restaurant={restaurantList[1]}/>
+            <RestrauntCard restaurant={restaurantList[2]}/>
+            <RestrauntCard restaurant={restaurantList[3]}/>
+            <RestrauntCard restaurant={restaurantList[4]}/>
+            <RestrauntCard restaurant={restaurantList[5]}/>
         </div>
     )
 }
