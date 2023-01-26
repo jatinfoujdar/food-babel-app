@@ -772,12 +772,11 @@ const RestrauntCard =({name,cloudinaryImageId,cuisines,lastMileTravelString})=>{
 const Body=()=>{
     return(
         <div className="restrauntCards">
-            <RestrauntCard {...restaurantList[0].data}/>
-            <RestrauntCard {...restaurantList[1].data}/>
-            <RestrauntCard {...restaurantList[2].data}/>
-            <RestrauntCard {...restaurantList[3].data}/>
-            <RestrauntCard {...restaurantList[4].data}/>
-            <RestrauntCard {...restaurantList[5].data}/>
+            {
+                restaurantList.map((restaurant)=>{
+                    return   <RestrauntCard {...restaurant.data} key={restaurant.data.id}/>
+                })
+            }
         </div>
     )
 }
