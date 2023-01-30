@@ -33,9 +33,9 @@ const Body=()=>{
     return null;
    }
    //not match
-   if (filteredrestaurants?.length===0) {
-    return <h1>No restaurant match your filter!!!!?!!?</h1>
-   }
+//    if (filteredrestaurants?.length===0) {
+//     return <h1>No restaurant match your filter!!!!?!!?</h1>
+//    }
 
     return (allRestaurants?.length===0)?<Shimmer/>:(
         <>
