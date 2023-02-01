@@ -1,14 +1,15 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const  loggedInUser = ()=>{
-  //check authentication
-  return false 
-  // else false
-} 
+// const  loggedInUser = ()=>{
+//   //check authentication
+//   return false 
+//   // else false
+// } 
 
 export const Title = () => (
     <a href="/">
-     <img className="logo" alt = "logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Food_Network_Logo.svg/1200px-Food_Network_Logo.svg.png"/>
+     <img className="logo" alt = "logo" src="https://seeklogo.com/images/B/bored-ape-nft-logo-0336141711-seeklogo.com.png"/>
      </a>
      );
  
@@ -21,9 +22,15 @@ export const Header = () => {
         <Title />
         <div className="nav-items">
           <ul>
-              <li>Home </li>
-              <li>About us</li>
-              <li>Contact</li>
+              <li>
+              <Link to ="/">Home</Link>
+               </li>
+                <li>
+                <Link to ="/about">About us</Link>
+                </li>             
+              <li>
+              <Link to ="/contact">Contact </Link> 
+              </li>
               <li>Cart</li>
           </ul>
         </div>
