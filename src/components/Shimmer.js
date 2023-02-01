@@ -2,7 +2,7 @@ import React from 'react'
 
 const Shimmer = () => {
   return (
-    <div class="container">
+    <div className="container">
      {Array(5).fill("").map((e)=>(
        <article>
        <div class="line"></div>

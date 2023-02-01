@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import {  Header } from "./components/Title";
 import Body from "./components/Body";
@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider,Outlet } from "react-router-dom";
 import About from "./components/About";
 import Error from "./components/Error";
 import Contact from "./components/Contact";
+import RestrauntMenu from "./components/RestrauntMenu";
 
 const AppLayout =() =>{
     return(
@@ -35,6 +36,10 @@ const appRouter = createBrowserRouter([
     {
       path:"/contact",
       element: <Contact />
+      },
+      {
+        path:"/restaurant/:id",
+        element: <RestrauntMenu/>
       },
   ]
   },

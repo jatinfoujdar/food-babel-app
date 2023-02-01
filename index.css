@@ -73,3 +73,7 @@ article .shimmer{
     }
 }
 /* {end} */
+
+.menu{
+    display: flex;
+}
