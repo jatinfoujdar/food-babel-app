@@ -1,30 +1,34 @@
 import React from "react";
 
 class Profile extends React.Component{
-    constructor(props){
-      super(props)
-    
-      this.state = {
-        count: 0,
-        };  
-        console.log("constructor")   
-    }
-    componentDidMount(){
-        //Api call
-        console.log("component did mount?");
-    }
+  constructor(props){
+    super(props)
+    this.state={
+      userInfo:{
+        name: "dummy",
+        location:"dummy",
+      },
+    };
+    console.log("constructur");
+  }
+  async componentDidMount(){
+    const data =await fetch("https://api.github.com/users/jatinfoujdar")
+    const json = await data.json();
+  
+    this.setState({
+      userInfo:json,
+    })
+  
+    console.log("componet did mount");
+  }
 render(){
-    const {count} = this.state;
     console.log("render");
   return(
   <div>
   <h1>Profile class components</h1>
-  <h2>name:{this.props.name}</h2> 
-  <h2>count:{count}</h2> 
-  <button onClick={()=>{this.setState({
-    count: 1, 
-  })
-  }}>Setcount</button>
+  <img src={this.state.userInfo.avatar_url}/>
+  <h2>name:{this.state.userInfo.name}</h2> 
+  <h2>location:{this.state.userInfo.location}</h2>
   </div>
   )
 }
