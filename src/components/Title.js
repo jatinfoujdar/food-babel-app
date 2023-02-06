@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useOnline from "../utils/useOnline";
 
 // const  loggedInUser = ()=>{
 //   //check authentication
 //   return false 
 //   // else false
 // } 
+
+const isOnline = useOnline;
 
 export const Title = () => (
     <a href="/">
@@ -31,9 +34,15 @@ export const Header = () => {
               <li>
               <Link to ="/contact">Contact </Link> 
               </li>
+              <li>
+              <Link to ="/instamart">Instamart</Link> 
+              </li>
               <li>Cart</li>
           </ul>
         </div>
+
+          <h1>{isOnline? "✔️" : "🔴"}</h1>
+
         {
           isLoggedIn ? (
             <button  onClick={()=>setIsLoggedIn(false)}>Logout</button>)

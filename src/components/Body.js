@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import RestrauntCard from "./RestrauntCard";
 import Shimmer from "./Shimmer";
 import { filterData } from "../utils/helper";
-import useOnline from "../utils/useOnline";
+// import useOnline from "../utils/useOnline";
 
  
 const Body=()=>{
@@ -24,12 +24,12 @@ const Body=()=>{
     setFilterRestaurants(json?.data?.cards[2]?.data?.data?.cards)
    }
 
-   const isOnline = useOnline();
-   if(!isOnline){
-    return<h2>
-        Offline please check your internet
-    </h2>
-   }
+//    const isOnline = useOnline();
+//    if(!isOnline){
+//     return<h2>
+//         Offline please check your internet
+//     </h2>
+//    }
 
    //Early return
    if (!allRestaurants) {
