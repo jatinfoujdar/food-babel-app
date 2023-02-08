@@ -42,10 +42,10 @@ const Body=()=>{
 
     return (allRestaurants?.length===0)?<Shimmer/>:(
         <>
-        <div className="search container p-3 bg-gray-200 m-2 ">
+        <div className="search container p-3 bg-gray-200 m-2  ">
           <input type="text" className="search-input rounded-md p-2 m-3  " placeholder="Search" value={searchTxt}
           onChange={(e)=> setSearchTxt(e.target.value)}></input>
-        <button className="p-2 m-3 bg-gray-900 text-white rounded-md shadow-sm"
+        <button className="p-2 m-3 bg-gray-900 text-white rounded-md shadow-sm hover:bg-blue-700"
         onClick={()=>{
             //filter the data
            const data= filterData(searchTxt,allRestaurants);
