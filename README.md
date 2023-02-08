@@ -1,10 +1,11 @@
 # Food-Babel-App
 
 # Tech Stack
-
+ 
   - Reactjs
   - TailwindCss
   - parcel and babel
+  - using Swiggy Public Api
 
 # Installation
 
