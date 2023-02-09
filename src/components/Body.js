@@ -40,7 +40,7 @@ const Body=()=>{
 //     return <h1>No restaurant match your filter!!!!?!!?</h1>
 //    }
 
-    return (allRestaurants?.length===0)?<Shimmer/>:(
+    return(allRestaurants?.length===0)?<Shimmer/>:(
         <>
         <div className="search container p-3 bg-gray-200 m-2  ">
           <input type="text" className="search-input rounded-md p-2 m-3  " placeholder="Search" value={searchTxt}
