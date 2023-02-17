@@ -2,7 +2,7 @@ import React from 'react'
 
 const Shimmer = () => {
   return (
-    <div className='flex p-40 '>
+    <div className='flex p-40  animate-pulse '>
      {Array(5).fill("").map((e)=>(
       
        <div class="flex-1 space-y-6 py-1 border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto ">

@@ -1,5 +1,13 @@
 # Food-Babel-App
 
+# Features:
+
+  -  Searching restaurants
+  - Add food items to cart
+  -  Routing
+  -  Responsive
+
+
 # Tech Stack
  
   - Reactjs
